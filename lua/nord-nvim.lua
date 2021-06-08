@@ -101,9 +101,9 @@ local theme = lush(function()
     -- + UI Components +
     -- +---------------+
     -- +-- Attributes --+
-    Bold {sp = spec.bold},
-    Italic {sp = spec.italic},
-    Underline {sp = spec.underline},
+    Bold {gui = spec.bold},
+    Italic {gui = spec.italic},
+    Underline {gui = spec.underline},
 
     -- +-- Editor --+
     ColorColumn {bg = clrs.nord1},
@@ -211,7 +211,7 @@ local theme = lush(function()
     Delimiter {fg = clrs.nord6},
     Exception {fg = clrs.nord9},
     Float {fg = clrs.nord15},
-    Function {fg = clrs.nord8},
+    Function {fg = clrs.nord8, Italic},
     Identifier {fg = clrs.nord4, gui = "NONE"},
     Include {fg = clrs.nord9},
     Keyword {fg = clrs.nord9},
@@ -225,7 +225,7 @@ local theme = lush(function()
     SpecialComment {fg = clrs.nord8, gui = spec.italicize_comments},
     Statement {fg = clrs.nord9},
     StorageClass {fg = clrs.nord9},
-    String {fg = clrs.nord14},
+    String {fg = clrs.nord14, Italic},
     Structure {fg = clrs.nord9},
     Tag {fg = clrs.nord4},
     Todo {fg = clrs.nord13, bg = nil},
@@ -351,7 +351,7 @@ local theme = lush(function()
     markdownLinkText {fg = clrs.nord8},
     markdownUrl {fg = clrs.nord4, gui = "NONE"},
     markdownBold {Bold},
-    markdownBoldDelimiter {Keyword},
+    -- markdownBoldDelimiter {Keyword},
     markdownFootnoteDefinition {markdownFootnote},
     markdownH2 {markdownH1},
     markdownH3 {markdownH1},
